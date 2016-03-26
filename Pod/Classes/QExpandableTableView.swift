@@ -12,12 +12,18 @@ import Foundation
 // will be able to expand and collaspe rows according to what you need. 
 
 
+/// This array wil contain all the information in the plist into this array. We pull all the information from this array
 var cellDescriptors: NSMutableArray!
+
 /// This is a double array because you have section and all the rows. In this example there is only 1 section
 var visibleRowsInSection = [[Int]]()
 
+/**
+ This class is the QExpandableTableView class. It inherits from UITableViewDelegate and UITableViewDataSource.
+ This class contains the methods that allow the user to have an expandable table view. As long you specify in the
+ plist, this class will read all the information from the plist and display the information as an expandable table view
+*/
 public class QExpandableTableView: UIViewController, UITableViewDelegate, UITableViewDataSource
-    
 {
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -57,7 +63,8 @@ public class QExpandableTableView: UIViewController, UITableViewDelegate, UITabl
     }
     
     /**
-       This will see the visibility of all the rows to true, and thus make it appear on the app
+       This method will recieve all the indices of the visible rows in each section. After it revieves all the indices
+       it will append to the same array. So after this method is called you will have an array of all the visible 
      */
     func getIndicesOfVisibleRows() {
         visibleRowsInSection.removeAll()
