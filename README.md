@@ -1,6 +1,6 @@
 # QExpandableTableView
 
-[![CI Status](http://img.shields.io/travis/Rupin Bhalla/QExpandableTableView.svg?style=flat)](https://travis-ci.org/Rupin Bhalla/QExpandableTableView)
+[![CI Status](http://img.shields.io/travis/RupiDev/QExpandableTableView.svg?style=flat)](https://travis-ci.org/RupiDev/QExpandableTableView)
 [![Version](https://img.shields.io/cocoapods/v/QExpandableTableView.svg?style=flat)](http://cocoapods.org/pods/QExpandableTableView)
 [![License](https://img.shields.io/cocoapods/l/QExpandableTableView.svg?style=flat)](http://cocoapods.org/pods/QExpandableTableView)
 [![Platform](https://img.shields.io/cocoapods/p/QExpandableTableView.svg?style=flat)](http://cocoapods.org/pods/QExpandableTableView)
