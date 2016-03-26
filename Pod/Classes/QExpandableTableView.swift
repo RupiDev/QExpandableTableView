@@ -6,34 +6,23 @@
 //
 //
 
-import Foundation
-
-// This cocoa-pod will be for used as an Expandable Table View. In this cocoa-pod you
-// will be able to expand and collaspe rows according to what you need. 
-
-
-var cellDescriptors: NSMutableArray!
-/// This is a double array because you have section and all the rows. In this example there is only 1 section
-var visibleRowsInSection = [[Int]]()
-
-public class QExpandableTableView: UIViewController, UITableViewDelegate, UITableViewDataSource
+public class QExpandableTableView: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    public var cellDescriptors: NSMutableArray!
+    public var visibleRowsInSection = [[Int]]()
     
-{
     override public func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
-    
     
     override public func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
     }
     
-    
-    // This is for Custom cells but this is a basic example, so we will only expand basic cells.
-    // The normal cell is just the usual cell you will see, and when you exapnd the basic cell, you will 
-    // see the valuePickerCell, which contains the specific value you want to see.
-    
+    /**
+     Assigns tableview delegates and registers all required nibs for cells
+     
+     - parameter tableView: the tableView which will be given from the child class
+     */
     public func configureTableView(tableView: UITableView) {
         tableView.delegate = self
         tableView.dataSource = self
@@ -57,10 +46,11 @@ public class QExpandableTableView: UIViewController, UITableViewDelegate, UITabl
     }
     
     /**
-       This will see the visibility of all the rows to true, and thus make it appear on the app
+     Update the visibleRowsInSection array with the indexes of the cells which are currently visible
+     This is called before the table view is filled with the corresponding cells
      */
     func getIndicesOfVisibleRows() {
-        visibleRowsInSection.removeAll()
+        visibleRowsInSection.removeAll()//To prevent duplicate cells
         
         for currentSectionCells in cellDescriptors {
             var visibleRows = [Int]()
@@ -91,6 +81,8 @@ public class QExpandableTableView: UIViewController, UITableViewDelegate, UITabl
         
         let cell = tableView.dequeueReusableCellWithIdentifier(currentCellDescriptor["cellIdentifier"] as! String, forIndexPath: indexPath) as! UITableViewCell
         
+        cell.textLabel?.text = ""
+        cell.detailTextLabel?.text = ""
         if currentCellDescriptor["isVisible"] as! Int == 1 {
             if (currentCellDescriptor["primaryTitle"] as! String).characters.count > 0 {
                 print("primary")
@@ -98,7 +90,7 @@ public class QExpandableTableView: UIViewController, UITableViewDelegate, UITabl
             }
             else if let secondaryTitle = currentCellDescriptor["secondaryTitle"] {
                 print("\(secondaryTitle)")
-                cell.textLabel?.text = secondaryTitle as? String
+                cell.detailTextLabel?.text = secondaryTitle as? String
             }
         }
         
