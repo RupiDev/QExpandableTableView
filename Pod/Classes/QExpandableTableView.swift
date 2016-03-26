@@ -43,6 +43,7 @@ public class QExpandableTableView: UIViewController, UITableViewDelegate, UITabl
         tableView.dataSource = self
         tableView.tableFooterView = UIView(frame: CGRectZero)
         
+        //Assigns a xib file with the cell identifier
         tableView.registerNib(UINib(nibName: "NormalCell", bundle: nil), forCellReuseIdentifier: "idCellNormal")
         tableView.registerNib(UINib(nibName: "ValuePickerCell", bundle: nil), forCellReuseIdentifier: "idCellValuePicker")
     }
@@ -53,6 +54,7 @@ public class QExpandableTableView: UIViewController, UITableViewDelegate, UITabl
        to load those contents into an array called cellDescriptors that you will use throughout the project.
     */
     public func loadCellDescriptors(tableView: UITableView) {
+        //Locates the plist file and load it into the table view
         if let path = NSBundle.mainBundle().pathForResource("CellDescriptor", ofType: "plist") {
             cellDescriptors = NSMutableArray(contentsOfFile: path)
             getIndicesOfVisibleRows()
@@ -65,8 +67,8 @@ public class QExpandableTableView: UIViewController, UITableViewDelegate, UITabl
        it will append to the same array. So after this method is called you will have an array of all the visible
      */
     func getIndicesOfVisibleRows() {
-        visibleRowsInSection.removeAll()//To prevent duplicate cells
         
+        visibleRowsInSection.removeAll()//To prevent duplicate cells
         for currentSectionCells in cellDescriptors {
             var visibleRows = [Int]()
             
