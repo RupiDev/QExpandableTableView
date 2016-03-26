@@ -12,5 +12,4 @@ before_install:
 xcode_project:  Example/QExpandableTableView.xcodeproj
 script:
 - set -o pipefail 
-- pod lib lint
 - pod spec lint
