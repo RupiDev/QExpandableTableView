@@ -62,7 +62,7 @@ public class QExpandableTableView: UIViewController, UITableViewDelegate, UITabl
     
     /**
        This method will recieve all the indices of the visible rows in each section. After it revieves all the indices
-       it will append to the same array. So after this method is called you will have an array of all the visible 
+       it will append to the same array. So after this method is called you will have an array of all the visible
      */
     func getIndicesOfVisibleRows() {
         visibleRowsInSection.removeAll()//To prevent duplicate cells
@@ -90,6 +90,15 @@ public class QExpandableTableView: UIViewController, UITableViewDelegate, UITabl
         return cellDescriptors[0][index] as! [String: AnyObject]
     }
     
+    /**
+     This function allows the user to select the current cell. If the cell you want is a custom cell, you can decide 
+     it there. It will return the specific cell of that indexPath
+     
+     - parameter tableView: This is the tableview that you are working and you want to insert into the tableview
+     - parameter indexPath: This is the specific indexPath that you are at.
+     
+     - returns: This method returns the cell.
+     */
     public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let actualIndex = visibleRowsInSection[0][indexPath.row]
         let currentCellDescriptor = getCellDescriptorForIndexPath(actualIndex)
@@ -111,6 +120,14 @@ public class QExpandableTableView: UIViewController, UITableViewDelegate, UITabl
         
         return cell
     }
+    
+    /**
+     This method will be activated when you selected a certain row/cell. This method will do the collasping and expanding
+     of the expandable table view 
+     
+     - parameter tableView: This is the tableview that you are working on
+     - parameter indexPath: This is the indexPath that you are on during the tableView
+     */
     public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let indexOfTappedRow = visibleRowsInSection[indexPath.section][indexPath.row]
         
