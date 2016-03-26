@@ -1,0 +1,20 @@
+PODS:
+  - Nimble (3.2.0)
+  - QExpandableTableView (0.1.0)
+  - Quick (0.9.1)
+
+DEPENDENCIES:
+  - Nimble (~> 3.0)
+  - QExpandableTableView (from `../`)
+  - Quick (~> 0.8)
+
+EXTERNAL SOURCES:
+  QExpandableTableView:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Nimble: 703854335d181df169bbca9c97117b5cf8c47c1d
+  QExpandableTableView: 87f6c8dc3867dccbb5b83ec304abb0117e39d675
+  Quick: a5221fc21788b6aeda934805e68b061839bc3165
+
+COCOAPODS: 0.39.0
