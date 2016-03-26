@@ -55,8 +55,9 @@ public class QExpandableTableView: UIViewController, UITableViewDelegate, UITabl
     */
     public func loadCellDescriptors(tableView: UITableView) {
         //Locates the plist file and load it into the table view
-        if let path = NSBundle.mainBundle().pathForResource("CellDescriptor", ofType: "plist") {
-            cellDescriptors = NSMutableArray(contentsOfFile: path)
+        if (NSBundle.mainBundle().pathForResource("CellDescriptor", ofType: "plist") != nil){
+            cellDescriptors = NSMutableArray(contentsOfFile: NSBundle.mainBundle().pathForResource("CellDescriptor", ofType: "plist")!)
+            print(cellDescriptors)
             getIndicesOfVisibleRows()
             tableView.reloadData()
         }
@@ -72,8 +73,8 @@ public class QExpandableTableView: UIViewController, UITableViewDelegate, UITabl
         for currentSectionCells in cellDescriptors {
             var visibleRows = [Int]()
             
-            for row in 0...( ( currentSectionCells as! [[String: AnyObject]] ).count - 1) {
-                if currentSectionCells[row]["isVisible"] as! Bool == true {
+            for var row in 0...( ( currentSectionCells as! [[String: AnyObject]] ).count - 1) {
+                if (currentSectionCells[row]["isVisible"] as! Bool == true) {
                     visibleRows.append(row)
                 }
             }
@@ -89,7 +90,8 @@ public class QExpandableTableView: UIViewController, UITableViewDelegate, UITabl
      - returns: This will return a String that tells you what kind of cell you have, that you made as a unique cell
      */
     func getCellDescriptorForIndexPath(index: Int) -> [String: AnyObject] {
-        return cellDescriptors[0][index] as! [String: AnyObject]
+        let cell = cellDescriptors[0][index] as! [String: AnyObject]
+        return cell
     }
     
     /**
@@ -109,14 +111,12 @@ public class QExpandableTableView: UIViewController, UITableViewDelegate, UITabl
         
         cell.textLabel?.text = ""
         cell.detailTextLabel?.text = ""
-        if currentCellDescriptor["isVisible"] as! Int == 1 {
-            if (currentCellDescriptor["primaryTitle"] as! String).characters.count > 0 {
-                print("primary")
+        if (currentCellDescriptor["isVisible"] as! Int == 1) {
+            if ( (currentCellDescriptor["primaryTitle"] as! String).characters.count > 0 ){
                 cell.textLabel?.text = currentCellDescriptor["primaryTitle"] as? String
             }
-            else if let secondaryTitle = currentCellDescriptor["secondaryTitle"] {
-                print("\(secondaryTitle)")
-                cell.detailTextLabel?.text = secondaryTitle as? String
+            else if ((currentCellDescriptor["secondaryTitle"] as! String).characters.count > 0) {
+                cell.detailTextLabel?.text = currentCellDescriptor["secondaryTitle"] as? String
             }
         }
         
@@ -133,9 +133,9 @@ public class QExpandableTableView: UIViewController, UITableViewDelegate, UITabl
     public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let indexOfTappedRow = visibleRowsInSection[indexPath.section][indexPath.row]
         
-        if cellDescriptors[indexPath.section][indexOfTappedRow]["isExpandable"] as! Bool == true {
+        if (cellDescriptors[indexPath.section][indexOfTappedRow]["isExpandable"] as! Bool == true) {
             var shouldExpandAndShowSubRows = false
-            if cellDescriptors[indexPath.section][indexOfTappedRow]["isExpanded"] as! Bool == false {
+            if (cellDescriptors[indexPath.section][indexOfTappedRow]["isExpanded"] as! Bool == false) {
                 shouldExpandAndShowSubRows = true
             }
             
@@ -159,7 +159,7 @@ public class QExpandableTableView: UIViewController, UITableViewDelegate, UITabl
      - returns: Returns the number of rows in the desired section of the desired tableview
      */
     public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if visibleRowsInSection != [] {
+        if (visibleRowsInSection != []) {
             return visibleRowsInSection[0].count
         }
         else {
