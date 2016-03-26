@@ -8,4 +8,5 @@
  - gem install cocoapods --no-rdoc --no-ri --no-document --quiet
  script:
  - set -o pipefail
- - pod lib lint
+ - xctool test -workspace Example/QExpandableTableView.xcworkspace/ -scheme QExpandableTableView-Example -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+ #- pod lib lint
