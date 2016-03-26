@@ -27,6 +27,7 @@
 		38F5CE4B4C59A81734A93E32D35B696E /* FailureMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A562213D0385708961C195D0CF8C45E /* FailureMessage.swift */; };
 		3D1BB98DEA422D8F173613EC715488B9 /* PostNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BF65FFEC8A084057E63EDF139D2BD1 /* PostNotification.swift */; };
 		40464B37E60D3AABD3875EF64A5667CD /* Pods-QExpandableTableView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 717C848D12B70384985BF08EC2BA4F66 /* Pods-QExpandableTableView_Example-dummy.m */; };
+		406767FC50C0CD2758700F85F496055F /* QExpandableTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E709610A95411BCAA783CCD35280AF /* QExpandableTableView.swift */; };
 		415F29FE4E9D970954C46CD3CF4AE345 /* SatisfyAnyOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8C873CB5F43A0FA130C9B9FF74B6B0 /* SatisfyAnyOf.swift */; };
 		486B74C8EFEB68AD25CE128F3051E432 /* ObjCExpectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A129290F935182407C183EB04C0C2C90 /* ObjCExpectation.swift */; };
 		4AF6C26A30D865059C24DC5317786B76 /* BeNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2748FABD1661E3A75F8B07E115CF96 /* BeNil.swift */; };
@@ -39,6 +40,7 @@
 		5FC39ED93AFAB809A8D3DEA790253001 /* String+FileName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CBE690E9186E686698A8A8A71C5355 /* String+FileName.swift */; };
 		63BBD83995BA60FA7D2E6AD4138C0D71 /* Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B5315AD30C24D1172D4F1524B068D /* Functional.swift */; };
 		64539BE196D1741570018FFF86F14133 /* MatcherFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971FBD63640E42D5B13E199D80A38E44 /* MatcherFunc.swift */; };
+		648DCE169C605BEEA12A3FFD918D68DD /* QExpandableTableView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AA1A8D7958B64F242B8FD27BCF939462 /* QExpandableTableView-dummy.m */; };
 		68527A7545342CBB4F923DC8543F7B20 /* DSL.m in Sources */ = {isa = PBXBuildFile; fileRef = FA89F15C3F95B9AD5D5608775C0DF7BD /* DSL.m */; };
 		6BC449E7281B32A93137B84DC70C6BA8 /* QExpandableTableView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 74AA70CE67286CF652722644CE2E2D39 /* QExpandableTableView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6ED0409031540D9B2AD7B061B608B0C9 /* DSL+Wait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75752235C59671F25A86BF987E354AFE /* DSL+Wait.swift */; };
@@ -65,7 +67,6 @@
 		93995594B48687788E6D68B111AF8D8E /* NSBundle+CurrentTestBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B16739831A57E59BFE39E8BF50128C /* NSBundle+CurrentTestBundle.swift */; };
 		96ED0CCA721955637A88FE0C9737EC56 /* SourceLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85564484FA6ABBE76C0B73863EFFFCDE /* SourceLocation.swift */; };
 		9A86E75FB6781251F7B3E43322141858 /* Quick-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 702D610886AA829A76EF79A25B88E1AC /* Quick-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9AA12424368DD8E074D45E9D3502C1ED /* QExpandableTableView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AA1A8D7958B64F242B8FD27BCF939462 /* QExpandableTableView-dummy.m */; };
 		9AC534B8B47FF354C64ECE3B2B979D12 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 279AA6492631DEFA8C439A9C088EEB8A /* XCTest.framework */; };
 		9B01B66A1FE0C38F563ABFEBC2970CA2 /* XCTestSuite+QuickTestSuiteBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DDC9824ED21BCC218F3C3E3E907AED /* XCTestSuite+QuickTestSuiteBuilder.m */; };
 		9B5DE58927557CE87968C051D2A1C47E /* BeLogical.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29528E2ADACEB31F5B2380DA50612C1 /* BeLogical.swift */; };
@@ -87,7 +88,6 @@
 		C81FFEEC76399EF3C7C1EE349C810E76 /* NimbleXCTestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DE7320F652DCF39EB6A1476F0C761B /* NimbleXCTestHandler.swift */; };
 		CD0A671D2A8DD31D50449BB358C56134 /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41006CFFEC28B4197817C14B5D087239 /* Expression.swift */; };
 		CEE8F26552088EFC616107A708C19692 /* DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414114D9FD8600FA208D6152470C2DF0 /* DSL.swift */; };
-		D229BF0B1CA6160A00123E4B /* QExpandableTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D229BF0A1CA6160A00123E4B /* QExpandableTableView.swift */; };
 		D41F628A81153A978EB209E4FE925700 /* Nimble.h in Headers */ = {isa = PBXBuildFile; fileRef = BE582507271FE02BA93C412C422D4ED8 /* Nimble.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D7098CA8558EE9E15F0F6ECD1E53803A /* Pods-QExpandableTableView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 808607FA3592CCE63A5C8C1D354390FC /* Pods-QExpandableTableView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D986E647D70C76E49A2E7B0070FE910D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E351727CD07BB90B2A3CAE2C2433F6C5 /* Foundation.framework */; };
@@ -244,6 +244,7 @@
 		B65AB889028901EAF2823A40F21B4F5B /* Contain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Contain.swift; path = Sources/Nimble/Matchers/Contain.swift; sourceTree = "<group>"; };
 		B6988794BE3149D9E7253F7D057A0A92 /* BeGreaterThan.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeGreaterThan.swift; path = Sources/Nimble/Matchers/BeGreaterThan.swift; sourceTree = "<group>"; };
 		B973D705E425F6A8CF2906380774F7EC /* World.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = World.h; path = Sources/Quick/World.h; sourceTree = "<group>"; };
+		B9E709610A95411BCAA783CCD35280AF /* QExpandableTableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QExpandableTableView.swift; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		BBACEB31F87FDB2A294186DEFA980590 /* ExampleGroup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExampleGroup.swift; path = Sources/Quick/ExampleGroup.swift; sourceTree = "<group>"; };
 		BE582507271FE02BA93C412C422D4ED8 /* Nimble.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Nimble.h; path = Sources/Nimble/Nimble.h; sourceTree = "<group>"; };
@@ -251,7 +252,6 @@
 		C34071C41916A37E669FEEBA855F42C2 /* BeAnInstanceOf.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeAnInstanceOf.swift; path = Sources/Nimble/Matchers/BeAnInstanceOf.swift; sourceTree = "<group>"; };
 		C5DDC9824ED21BCC218F3C3E3E907AED /* XCTestSuite+QuickTestSuiteBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "XCTestSuite+QuickTestSuiteBuilder.m"; path = "Sources/Quick/XCTestSuite+QuickTestSuiteBuilder.m"; sourceTree = "<group>"; };
 		CB75D143FA2C1D4F42F8F03369239006 /* ObjCMatcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ObjCMatcher.swift; path = Sources/Nimble/Wrappers/ObjCMatcher.swift; sourceTree = "<group>"; };
-		D229BF0A1CA6160A00123E4B /* QExpandableTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QExpandableTableView.swift; sourceTree = "<group>"; };
 		D29528E2ADACEB31F5B2380DA50612C1 /* BeLogical.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeLogical.swift; path = Sources/Nimble/Matchers/BeLogical.swift; sourceTree = "<group>"; };
 		D365431FBA3C40A9570E9266B44005D7 /* NMBExceptionCapture.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NMBExceptionCapture.m; path = Sources/Nimble/objc/NMBExceptionCapture.m; sourceTree = "<group>"; };
 		D772AF03D0B82E63647D129AEA9CCF1B /* SuiteHooks.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SuiteHooks.swift; path = Sources/Quick/Hooks/SuiteHooks.swift; sourceTree = "<group>"; };
@@ -371,6 +371,14 @@
 			path = ../..;
 			sourceTree = "<group>";
 		};
+		3B73DDF4BD27585089A92C48A9F39168 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B9E709610A95411BCAA783CCD35280AF /* QExpandableTableView.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		3DA718426B574401281FFA751D33D9BF /* Nimble */ = {
 			isa = PBXGroup;
 			children = (
@@ -434,14 +442,6 @@
 				0C6B012983F9FEF8CC65C1318F5F090C /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		73E63074347FCA15348DA062C0BD1456 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				D229BF0A1CA6160A00123E4B /* QExpandableTableView.swift */,
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -556,7 +556,7 @@
 		D2C0A44F569C84D189E8222676915D3C /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				73E63074347FCA15348DA062C0BD1456 /* Classes */,
+				3B73DDF4BD27585089A92C48A9F39168 /* Classes */,
 			);
 			path = Pod;
 			sourceTree = "<group>";
@@ -688,7 +688,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 89842BD5088C7617264778D4C285F17F /* Build configuration list for PBXNativeTarget "QExpandableTableView" */;
 			buildPhases = (
-				F5217818A4392522C41CE3D29533BD2B /* Sources */,
+				E7ABE973CB36881BE23A919AD2509190 /* Sources */,
 				22B2543EB7BD4F6C7A94DFBC57A47742 /* Frameworks */,
 				84B4BD7F6433B9D79674CDEE61EE5712 /* Resources */,
 				ADE548E8741F15DE0D2A0A7E283191A1 /* Headers */,
@@ -824,7 +824,6 @@
 				30AACAA8D51DC8C429577D9B67BB016C /* BeginWith.swift in Sources */,
 				7EBD6B630F4536CB673DC0B455CCB16D /* BeGreaterThan.swift in Sources */,
 				8040A37FF5BBDF1964CAB8C0068ED315 /* BeGreaterThanOrEqualTo.swift in Sources */,
-				D229BF0B1CA6160A00123E4B /* QExpandableTableView.swift in Sources */,
 				7202A0B871C57B7857341D88C2883A3A /* BeIdenticalTo.swift in Sources */,
 				7F40FC3F4DE4EA4702F41F01A12A7353 /* BeLessThan.swift in Sources */,
 				E6F6FF9554A6C7EABD6B92B691751DAD /* BeLessThanOrEqual.swift in Sources */,
@@ -916,11 +915,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F5217818A4392522C41CE3D29533BD2B /* Sources */ = {
+		E7ABE973CB36881BE23A919AD2509190 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AA12424368DD8E074D45E9D3502C1ED /* QExpandableTableView-dummy.m in Sources */,
+				648DCE169C605BEEA12A3FFD918D68DD /* QExpandableTableView-dummy.m in Sources */,
+				406767FC50C0CD2758700F85F496055F /* QExpandableTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

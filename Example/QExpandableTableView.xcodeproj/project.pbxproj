@@ -15,6 +15,9 @@
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		CDC08526914D237DD7E598A1 /* Pods_QExpandableTableView_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 656E77CD0433204CFE359E10 /* Pods_QExpandableTableView_Tests.framework */; };
 		CDDCAED0489665BEE3A83FA0 /* Pods_QExpandableTableView_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33069098BF1D0270BEE6453E /* Pods_QExpandableTableView_Example.framework */; };
+		D2F433901CA62F2300FAECC1 /* ValuePickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2F4338F1CA62F2300FAECC1 /* ValuePickerCell.xib */; };
+		D2F433921CA62F2A00FAECC1 /* NormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2F433911CA62F2A00FAECC1 /* NormalCell.xib */; };
+		D2F433951CA630D100FAECC1 /* CellDescriptor.plist in Resources */ = {isa = PBXBuildFile; fileRef = D2F433941CA630D100FAECC1 /* CellDescriptor.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,9 @@
 		72B083E839022B59C46E9AD3 /* Pods-QExpandableTableView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QExpandableTableView_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QExpandableTableView_Tests/Pods-QExpandableTableView_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		9B2729A2C2A593FC2928977C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		A9A8B6B6E474017E81E58434 /* Pods-QExpandableTableView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QExpandableTableView_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QExpandableTableView_Tests/Pods-QExpandableTableView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		D2F4338F1CA62F2300FAECC1 /* ValuePickerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ValuePickerCell.xib; sourceTree = "<group>"; };
+		D2F433911CA62F2A00FAECC1 /* NormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NormalCell.xib; sourceTree = "<group>"; };
+		D2F433941CA630D100FAECC1 /* CellDescriptor.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CellDescriptor.plist; sourceTree = "<group>"; };
 		ED6C0C70726B1505987FBB29 /* QExpandableTableView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = QExpandableTableView.podspec; path = ../QExpandableTableView.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,6 +103,7 @@
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
+				D2F433931CA62F3700FAECC1 /* Custom Cells */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
@@ -107,6 +114,7 @@
 		607FACD31AFB9204008FA782 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D2F433941CA630D100FAECC1 /* CellDescriptor.plist */,
 				607FACD41AFB9204008FA782 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -146,6 +154,15 @@
 				656E77CD0433204CFE359E10 /* Pods_QExpandableTableView_Tests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D2F433931CA62F3700FAECC1 /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D2F4338F1CA62F2300FAECC1 /* ValuePickerCell.xib */,
+				D2F433911CA62F2A00FAECC1 /* NormalCell.xib */,
+			);
+			name = "Custom Cells";
 			sourceTree = "<group>";
 		};
 		E1372ACC64C7B120791856D1 /* Pods */ = {
@@ -247,8 +264,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				D2F433951CA630D100FAECC1 /* CellDescriptor.plist in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				D2F433901CA62F2300FAECC1 /* ValuePickerCell.xib in Resources */,
+				D2F433921CA62F2A00FAECC1 /* NormalCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

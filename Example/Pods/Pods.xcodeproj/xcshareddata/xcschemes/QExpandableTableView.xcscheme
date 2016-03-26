@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '09D1A69CCF01C03E0C051D49'
+               BlueprintIdentifier = 'C10A57509C3D8D5F0EB2EA95'
                BlueprintName = 'QExpandableTableView'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'QExpandableTableView.framework'>
