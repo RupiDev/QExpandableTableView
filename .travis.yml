@@ -9,6 +9,7 @@ rvm: 2.2.2
 before_install:
 - gem install cocoapods --no-rdoc --no-ri --no-document --quiet
 - pod install --project-directory=Example
+xcode_project:  Example/QExpandableTableView.xcodeproj
 script:
 - set -o pipefail 
 - pod lib lint
