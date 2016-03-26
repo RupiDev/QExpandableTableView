@@ -1,6 +1,0 @@
-framework module QExpandableTableView {
-  umbrella header "QExpandableTableView-umbrella.h"
-
-  export *
-  module * { export * }
-}
