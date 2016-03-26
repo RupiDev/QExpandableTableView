@@ -1,4 +1,4 @@
-# OS X
+#OS X
 .DS_Store
 
 # Xcode
@@ -31,3 +31,7 @@ Carthage
 # `pod install` in .travis.yml
 #
 # Pods/
+_Pods.xcodeproj
+Example/QExpandableTableView.xcodeproj
+Example/QExpandableTableView.xcworkspace
+Example/Pods
