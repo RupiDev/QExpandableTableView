@@ -73,7 +73,7 @@ public class QExpandableTableView: UIViewController, UITableViewDelegate, UITabl
         for currentSectionCells in cellDescriptors {
             var visibleRows = [Int]()
             
-            for var row in 0...( ( currentSectionCells as! [[String: AnyObject]] ).count - 1) {
+            for  row in 0...( ( currentSectionCells as! [[String: AnyObject]] ).count - 1) {
                 if (currentSectionCells[row]["isVisible"] as! Bool == true) {
                     visibleRows.append(row)
                 }
@@ -107,7 +107,7 @@ public class QExpandableTableView: UIViewController, UITableViewDelegate, UITabl
         let actualIndex = visibleRowsInSection[0][indexPath.row]
         let currentCellDescriptor = getCellDescriptorForIndexPath(actualIndex)
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(currentCellDescriptor["cellIdentifier"] as! String, forIndexPath: indexPath) 
+        let cell = tableView.dequeueReusableCellWithIdentifier(currentCellDescriptor["cellIdentifier"] as! String, forIndexPath: indexPath) as! CustomCell
         
         cell.textLabel?.text = ""
         cell.detailTextLabel?.text = ""
