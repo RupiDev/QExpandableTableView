@@ -105,7 +105,7 @@ public class QExpandableTableView: UIViewController, UITableViewDelegate, UITabl
         let actualIndex = visibleRowsInSection[0][indexPath.row]
         let currentCellDescriptor = getCellDescriptorForIndexPath(actualIndex)
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(currentCellDescriptor["cellIdentifier"] as! String, forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(currentCellDescriptor["cellIdentifier"] as! String, forIndexPath: indexPath) 
         
         cell.textLabel?.text = ""
         cell.detailTextLabel?.text = ""
